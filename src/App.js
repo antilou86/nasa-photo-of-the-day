@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import axios from "axios";
 import TopCard from "./components/TopCard/TopCard"
 import ImageCard from "./components/ImageCard/ImageCard"
 import Footer from "./components/Footer/Footer"
@@ -12,14 +12,18 @@ function App() {
   const [descriptionData, setDescriptionData] = useState();
   const [dateData, setDateData] = useState();
 
+  
+
+
   useEffect( () => {
-    Axios.get('https://api.nasa.gov/planetary/apod?api_key=cfEGaKFBZ0jfgFy73Tb7czJEKwbavh26xRfts7i7')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=cfEGaKFBZ0jfgFy73Tb7czJEKwbavh26xRfts7i7')
     .then(res => {
-      setImageData(res.data);
-      setDescriptionData(res.data.explanation);
-      setDateData(res.data.date);
+      setImageData(res.data)
+      console.log('res= ' + res)
+      setDescriptionData(res.data.explanation)
+      setDateData(res.data.date)
     })
-    .catch(err => (console.log(err)))
+    .catch(err => (console.log('error: ' + err)))
   },[]);
 
   return (
