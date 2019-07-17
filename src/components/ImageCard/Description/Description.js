@@ -1,8 +1,11 @@
 import React from "react";
 
-function Description() {
+function Description(props) {
+    const {descriptionData} = props;
     return (
-        <div></div>
+        <div>
+            <p>{descriptionData}</p>
+        </div>
     )
 }
 

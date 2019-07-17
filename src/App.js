@@ -8,22 +8,24 @@ import "./App.css";
 
 function App() {
 
-  const [ImageData, setImageData] = useState();
+  const [imageData, setImageData] = useState();
   const [descriptionData, setDescriptionData] = useState();
+  const [dateData, setDateData] = useState();
 
   useEffect( () => {
     Axios.get('https://api.nasa.gov/planetary/apod?api_key=cfEGaKFBZ0jfgFy73Tb7czJEKwbavh26xRfts7i7')
     .then(res => {
-      setImageData(res.data)
-      setDescriptionData(res.data.explanation)
+      setImageData(res.data);
+      setDescriptionData(res.data.explanation);
+      setDateData(res.data.date);
     })
     .catch(err => (console.log(err)))
   },[]);
 
   return (
     <div className="App">
-      <TopCard/>
-      <ImageCard imageData={ImageData} descriptionData={descriptionData}/>
+      <TopCard dateData={dateData}/>
+      <ImageCard imageData={imageData} descriptionData={descriptionData}/>
       <Footer/>
     </div>
   );
