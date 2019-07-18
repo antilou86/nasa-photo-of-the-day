@@ -4,19 +4,24 @@ import styled from 'styled-components'
 
 const StyledDiv = styled.div`
     width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: #afb8c7;
     padding-bottom: 20px;
     color: #1a222e;
 `;
+const StyledP = styled.p `
+    font-family: sans-serif;
+    margin: 20px 40px;
+`
 
 
 const Description = (props) => (
   <StyledDiv>
     <Container textAlign='left'>
-      <b>Description</b>
+      
+      <b><br/><br/> Find this interesting? Learn more below.</b>
       <Divider />
-      <p>{props.descriptionData}</p>
+      <StyledP>{props.descriptionData}</StyledP>
     </Container>
   </StyledDiv>
 )

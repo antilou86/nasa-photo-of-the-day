@@ -22,11 +22,13 @@ const BigH1 = styled.h1`
     font-size: 50px;
     font-family: sans-serif;
     flex-flow: wrap;
+    margin-top:70px;
 `;
 
 const Logo = styled.img`
     width:30%;
     min-width:213px;
+    margin-left:20px;
     `;
 
 function TopCard(props) {

@@ -22,6 +22,11 @@ const testing = {
     position: 'relative'  }
 ;
 
+const ActualImage = styled.img`
+    width: 85%;
+    height: auto;
+    `
+
 let checker = (value) => { 
     if (value.media_type === "video"){
     return (
@@ -31,7 +36,7 @@ let checker = (value) => {
                 allowFullScreen/>
         
     )} else {
-    return (<img src={value.url} alt="a sweet pic straight from Nasa" />)
+    return (<ActualImage src={value.url} alt="a sweet pic straight from Nasa" />)
 }}    
     return (
         <div>
