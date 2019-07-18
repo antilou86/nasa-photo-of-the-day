@@ -3,7 +3,7 @@ import { Container, Divider } from 'semantic-ui-react'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
-    width: 80%;
+    width: 90%;
     margin:0 auto;
     background-color: #afb8c7;
     padding-bottom: 20px;

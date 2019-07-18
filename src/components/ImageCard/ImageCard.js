@@ -9,7 +9,7 @@ function ImageCard(props) {
 const {imageData, descriptionData} = props;
 
 let ImageWrapper = styled.div`
-    width: 80%;
+    width: 90%;
     height: auto;
     background-color: #afb8c7;
     margin: 0 auto;
