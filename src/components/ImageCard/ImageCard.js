@@ -12,8 +12,8 @@ let checker = (value) => {
     if (value.media_type === "video"){
     return (
         <Iframe url={value.url}
-                width="450px"
-                height="auto"
+                width="800px"
+                height="500px"
                 display="initial"
                 position="relative"
                 allowFullScreen/>
@@ -22,7 +22,7 @@ let checker = (value) => {
 }}    
     return (
         <div>
-            {checker(imageData)}
+            {imageData && checker(imageData)}
             <Description descriptionData={descriptionData}/>
         </div>
     )}
