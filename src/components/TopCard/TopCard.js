@@ -8,10 +8,14 @@ const HeaderWrapper = styled.div`
     padding-bottom: 20px;
     padding-top: 10px;
     display: flex;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        min-width: 300px;
+    }
 `;
 const TitleWrapper = styled.div`
     width: 80%;
-    min-width: 415px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -19,16 +23,27 @@ const TitleWrapper = styled.div`
     font-size: 20px;
 `;
 const BigH1 = styled.h1`
-    font-size: 50px;
+    font-size: 40px;
     font-family: sans-serif;
-    flex-flow: wrap;
+    flex-flow: row, wrap;
     margin-top:70px;
+    
+    @media (max-width: 900px) {
+        font-size: 30px;
+    }
+    @media (max-width: 700px) {
+        margin-top: 20px;
+    }
+   
 `;
 
 const Logo = styled.img`
     width:30%;
-    min-width:213px;
+    height: auto;
     margin-left:20px;
+    @media (max-width: 700px) {
+        margin: 0 auto;
+    }
     `;
 
 function TopCard(props) {

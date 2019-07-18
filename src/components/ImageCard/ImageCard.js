@@ -14,6 +14,10 @@ let ImageWrapper = styled.div`
     background-color: #afb8c7;
     margin: 0 auto;
     overflow: hidden;
+
+    @media (max-width: 700px) {
+        min-width: 300px;
+    }
 `;
 
 const testing = {

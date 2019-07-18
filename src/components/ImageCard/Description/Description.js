@@ -8,6 +8,10 @@ const StyledDiv = styled.div`
     background-color: #afb8c7;
     padding-bottom: 20px;
     color: #1a222e;
+
+    @media (max-width: 700px) {
+        min-width: 300px;
+    }
 `;
 const StyledP = styled.p `
     font-family: sans-serif;
