@@ -35,7 +35,7 @@ let checker = (value) => {
 }}    
     return (
         <div>
-        <ImageWrapper>
+        <ImageWrapper> 
             {imageData && checker(imageData)}
         </ImageWrapper>
             <Description descriptionData={descriptionData}/>
