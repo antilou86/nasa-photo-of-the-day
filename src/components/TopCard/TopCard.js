@@ -51,7 +51,7 @@ function TopCard(props) {
 const {dateData} = props
     return (
         <HeaderWrapper>
-            <Logo alt="Nasa Logo" src="https://api.nasa.gov/images/logo.png"/>
+            <Logo alt="Nasa Logo" src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"/>
             <TitleWrapper>
                 <BigH1>Image of The Day</BigH1>
                 <h3>{dateData}</h3>
